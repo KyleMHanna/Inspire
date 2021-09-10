@@ -7,6 +7,12 @@ function drawWeather() {
   document.getElementById("weather").innerHTML = ProxyState.weather.WeatherTemplate
 }
 
+// function _drawTime() {
+// var today = new Date();
+// var time = today.getHours() + ":" + today.getMinutes() 
+// document.getElementById("time").innerHTML = _drawTime()
+// }
+
 export class WeatherController {
   constructor() {
     ProxyState.on("weather", drawWeather);
