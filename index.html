@@ -8,7 +8,7 @@
   <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <title>Inspire</title>
@@ -25,6 +25,35 @@
         <div class="col-md-6 text-center" id="weather">
           <div id="weather"></div>
           <!-- Weather Card -->
+      
+        </div>
+        <div class="col-md-3 text-center"></div>
+      </div>
+    </div>
+
+<div class="todos"> </div>
+
+
+<!-- todo card start -->
+        <!-- <div class="container-fluid">
+      <div class="row text-center">
+        <div class="col-md-3 text-center"></div>
+        <div class="col-md-6 text-center" id="todo">
+          <div class="row shadow-lg rounded ">
+      <div class="todos">
+      </div>
+      <div class="col shadow-lg rounded p-3 text-light">
+    <p  class="${this.taskId}" onclick="app.todosController.completeTodo('${this.id}')">${this.title} <input type="checkbox" value="" ${this.checked ? "checked" : ""} >  </p>
+    
+    </div>
+    <div class="col-1 shadow-lg rounded p-3">
+    <button class="text-danger close" onclick="app.todosController.deleteTodo('${this.id}')"><i class="mdi mdi-delete"></i></button>
+    </div>
+    </div> -->
+          <!-- todo card end -->
+
+
+
       
         </div>
         <div class="col-md-3 text-center"></div>
@@ -47,6 +76,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"
     integrity="sha512-lTLt+W7MrmDfKam+r3D2LURu0F47a3QaW5nF0c6Hl0JDZ57ruei+ovbg7BrZ+0bjVJ5YgzsAWE+RreERbpPE1g=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- sweet alert -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <script src="app/main.js" type="module"></script>
 </body>

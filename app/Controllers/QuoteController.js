@@ -7,6 +7,7 @@ function _drawQuotes(){
 
 export  class QuoteController { 
     constructor(){
+      console.log('hi from quote controller')
         ProxyState.on("quotes", _drawQuotes)
         quoteService.getQuote()
     }
@@ -15,7 +16,7 @@ export  class QuoteController {
         try {
             quoteService.getQuotes()
         } catch (error) {
-            
+              console.log(error, 'getQuotes QuoteController')
         }
     }
 }
