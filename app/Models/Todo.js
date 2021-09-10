@@ -6,7 +6,7 @@ export class Todo {
     this.completed = data.completed
     this.checked = data.checked || false
   }
-  get todoTemplate(){
+  get Template(){
     return /*html*/ `
       <div class="row shadow-lg rounded ">
       <div class="todos">
