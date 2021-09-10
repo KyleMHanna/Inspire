@@ -24,7 +24,7 @@ get WeatherTemplate(){
 <h3 class="text-dark">${this.city}</h3>
 <h3 class="text-dark">${this.weatherConversion()}&deg;</h3>
 <h3 class="text-dark">${this.weatherDesc}</h3>
-<img class="bw img-fluid" src="http://openweathermap.org/img/w/${this.icon}.png" alt=""/>
+<img class=" img-fluid" src="http://openweathermap.org/img/w/${this.icon}.png" alt=""/>
   </div>
 `
   }
