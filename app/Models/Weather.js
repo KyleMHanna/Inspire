@@ -17,6 +17,7 @@ weatherConversion(){
     return Math.floor(temp)
   }
 
+// TODO add a toggle for weather conversion
 
 get WeatherTemplate(){
     return /*html*/`
