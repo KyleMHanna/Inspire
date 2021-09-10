@@ -11,6 +11,6 @@ class QuoteService {
     ProxyState.quotes = new Quote(res.data)
   }
 }
- console.log('hi from quote service')
+console.log('hi from quote service')
 
 export const quoteService = new QuoteService()

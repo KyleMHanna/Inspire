@@ -8,9 +8,9 @@ export class Quote {
     get QuoteTemplate() {
         return /*html*/`
       <div class="quote">
-                <p class="lead text-light">"${this.content}"</p>
-                <p class="lead text-light">Author: ${this.author}</p>
-                <p class="lead text-light">${this.tags}</p>
+                <p class="text-light">"${this.content}"</p>
+                <p class="text-light">Author: ${this.author}</p>
+                <p class=" text-light">${this.tags}</p>
         </div>
         
         `

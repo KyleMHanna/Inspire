@@ -10,7 +10,7 @@ function drawWeather() {
 // function _drawTime() {
 // var today = new Date();
 // var time = today.getHours() + ":" + today.getMinutes() 
-// document.getElementById("time").innerHTML = _drawTime()
+// document.getElementById("time").innerText = _drawTime()
 // }
 
 export class WeatherController {
