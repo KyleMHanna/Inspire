@@ -1,5 +1,5 @@
 export class Image {
-  constructor(data){
+constructor(data){
     this.id = data.id
     this.imgUrl = data.imgUrl
     this.largeImgUrl = data.largeImgUrl

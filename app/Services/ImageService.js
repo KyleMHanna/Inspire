@@ -1,8 +1,9 @@
-import { ProxyState }  from "../AppState.js";
-import { api } from "../Services/AxiosService.js";
+import { ProxyState } from "../AppState.js";
 import { Image } from "../Models/Image.js";
 
-let url = 'images'
+const api = axios.create({
+  baseURL: "https://bcw-sandbox.herokuapp.com/api/"
+}) 
 
 class ImageService {
   async getImages() {

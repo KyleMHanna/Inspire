@@ -1,19 +1,19 @@
-import { imageService }from "../Services/ImageService.js";
+import { imageService } from "../Services/ImageService.js";
 import { ProxyState } from "../AppState.js";
 
 
 function _drawImg() {
-  document.body.style.backgroundImage = `url(${ProxyState.image.largeImgUrl})`; 
+  document.body.style.backgroundImage =  `url(${ProxyState.image.largeImgUrl})`;  
 }
 
 export class ImageController {
   constructor(){
-      ProxyState.on('image', _drawImage)
+      ProxyState.on('image', _drawImg)
         this.getImages()
         console.log('hi from image controller');
   }
 
-  getImg (){
+  getImages (){
     try {
     imageService.getImages()
     } catch (error) {

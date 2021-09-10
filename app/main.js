@@ -1,4 +1,4 @@
-import {ImageController} from "./Controllers/ImageController.js";
+import { ImageController } from "./Controllers/ImageController.js";
 
 class App {
 imageController = new ImageController()

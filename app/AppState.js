@@ -1,8 +1,9 @@
-import Todo from "./Models/Todo.js"
-import Weather from "./Models/Weather.js"
+// import Todo from "./Models/Todo.js"
+// import Weather from "./Models/Weather.js"
+import { Image } from "./Models/Image.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
-import Quote from "./Models/Quote.js"
+// import Quote from "./Models/Quote.js"
 
 class AppState extends EventEmitter {
    /** @type {Todo[]} */
