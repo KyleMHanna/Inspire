@@ -1,4 +1,4 @@
-import imageService from "../Services/ImageService.js";
+import { imageService }from "../Services/ImageService.js";
 import { ProxyState } from "../AppState.js";
 
 
