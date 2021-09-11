@@ -14,7 +14,7 @@ class TodoService {
 
   async getTodos() {
     let res = await api.get();
-    ProxyState.todos = res.data.data.map(t => new Todo(t))
+    ProxyState.todos = res.data.map(t => new Todo(t))
   }
 
 

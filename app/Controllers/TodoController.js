@@ -14,7 +14,27 @@ function _drawTodos(){
 export class TodoController {
 
   constructor() {
-  
+    ProxyState.on("todos", _drawTodos)
+    todoService.getTodos()
+  }
+
+  getTodos(){
+    try {
+        todoService.getTodos()
+    } catch (error) {
+      console.log(error, 'get getTodos() error in controller');
+    }
+  }
+addTodo() {
+
+
+  try {
+  todoService.addTodo(todo);
+  } catch (error) {
+        console.log(error, 'get addTodo() error in controller');
   }
 }
+}
+
+
 console.log('hi from todo controller')
