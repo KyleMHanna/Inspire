@@ -17,16 +17,26 @@ weatherConversion(){
     return Math.floor(temp)
   }
 
+celciusCoversion(){
+    let cel = (this.kelvin - 273.15)
+    return Math.floor(cel)
+    
+}
+
+
+
 // TODO add a toggle for weather conversion
 
 get WeatherTemplate(){
     return /*html*/`
 <div class="weather">
-<h3 class="text-primary">${this.city}</h3>
-<h3 class="text-primary">${this.weatherConversion()}&deg;</h3>
-
+<h3 class="text-dark">${this.city}</h3>
+<h3 class="text-dark ">${this.weatherConversion()}&deg; F</h3>
+<h3 class="text-dark ">${this.celciusCoversion()}&deg; C</h3>
+<h3 class="text-dark">Weather Forcast: ${this.weatherDesc}</h3>
 <img class=" img-fluid" src="http://openweathermap.org/img/w/${this.icon}.png" alt=""/>
   </div>
 `
   }
 }
+{/* <button class="toggleBtn" id="toggleDegrees">${this.weatherConversion()}&deg; ${this.celciusCoversion()}&deg;</button> */}

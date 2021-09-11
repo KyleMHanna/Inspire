@@ -15,6 +15,8 @@ class TodoService {
   async getTodos() {
     let res = await api.get();
     ProxyState.todos = res.data.map(t => new Todo(t))
+    ProxyState.count = ProxyState.todos.length
+    console.log(ProxyState.count)
   }
 
 
@@ -47,11 +49,19 @@ class TodoService {
   async removeTodo(todoId) {
     await api.delete(todoId)
     this.getTodos()
-    Swal.fire(
-    'Deleted!',
-    ' ',
-    'error'
-      )
+  Swal.fire({
+  title: 'Are you sure you want to delete?',
+  showCancelButton: true,
+  confirmButtonText: 'Yes',
+  denyButtonText: `no`,
+}).then((result) => {
+  /* Read more about isConfirmed, isDenied below */
+  if (result.isConfirmed) {
+    Swal.fire('Saved!', '', 'success')
+  } else if (result.isDenied) {
+    Swal.fire('Changes are not saved', '', 'info')
+  }
+})
   }
 }
 

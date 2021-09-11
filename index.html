@@ -37,9 +37,9 @@
 <!-- clock goes here -->
   <div class="container-fluid">
       <div class="row text-center">
-        <div class="col-md-3 text-center"> 
+        <div class="col-md-2 text-center"> 
         </div>
-        <div class="col-md-6 text-center" id="clock">
+        <div class="col-md-8 text-center" id="clock">
           <div id="clock"></div>
       
           <!-- Weather Card -->
@@ -48,12 +48,43 @@
         <div class="col-md-3 text-center"></div>
       </div>
     </div>
-    <!-- clock goes here -->
-<div class="container-fluid">
+    
+    <div class="container-fluid">
       <div class="row text-center">
+        <div class="col-md-4 text-center"> </div>
+        
+        <div class="col-md-4 text-center">
+          <div class=" shadow-lg rounded  mb-4"> 
+            <form onsubmit="app.todoController.addTodo(event)">
+              <div class=" shadow-lg "> 
+              <input type="text" name="title" minlength="3" maxlength="15" required placeholder="Add Todo" class="text-center">
+            </form>
+            <button type="submit" class="btn btn-outline-success shadow mdi mdi-plus-thick"></button>
+          </div>
+          <div>
+            <div>Total Todos: <span id="todo-count" class="todo-count text-dark"></span></div>
+          </div> 
+          <div class="col-md-4 text-center"> </div> 
+        </div>
+      </div>
+    </div>
+    
+    <!-- todo card start -->
+    
+    
+    <div id="todo" class="todo"> </div>
+    <!-- todo template-->
+    
+    
+    <!-- todo card end -->
+    
+    
+    <!-- clock goes here -->
+  <div class="container-fluid">
+      <div class="row ">
         <div class="col-md-12 text-center">
-<clock>
-<div class="wrapper">
+  <clock>
+  <div class="wrapper">
         <div class="time">
             <span class="color" id="time"></span>
             <span class="color" id="sec"></span>
@@ -71,41 +102,10 @@
         <span class="color" id="date"></span>
     </div>
     <script src="clock.js"></script>
-    </clock>
-      </div>
-        </div>
-        </div>
-
-    <div class="container-fluid">
-      <div class="row text-center">
-        <div class="col-md-4 text-center"> </div>
-
-        <div class="col-md-4 text-center">
-        <div class=" shadow-lg rounded  mb-4"> 
-          <form onsubmit="app.todoController.addTodo(event)">
-            <div class=" shadow-lg "> 
-              <input type="text" name="title" minlength="3" maxlength="15" required placeholder="Add Todo" class="text-center">
-            </form>
-            <button type="submit" class="btn btn-outline-success shadow mdi mdi-plus-thick"></button>
-            </div>
-          <div>
-          
-      </div> 
-      <div class="col-md-4 text-center"> </div> 
+  </clock>
   </div>
   </div>
-</div>
-
-    <!-- todo card start -->
-    
- 
-        <div id="todo" class="todo"> </div>
-          <!-- todo template-->
-      
-  
-    <!-- todo card end -->
-
-
+  </div>
   </main>
   <footer class="bg-dark text-light">
     <div class="text-center no-select">
@@ -114,8 +114,8 @@
     </div>
   </footer>
 
-
-
+  
+  
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
@@ -131,5 +131,7 @@
 </body>
 
 </html>
+
+
 
 

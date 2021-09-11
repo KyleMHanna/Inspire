@@ -9,6 +9,9 @@ function _drawTodos(){
   document.getElementById("todo").innerHTML = template
 }
 
+function _TodoCount(){
+  document.getElementById('todo-count').innerHTML = ProxyState.count
+}
 
 
 export class TodoController {
@@ -16,6 +19,7 @@ export class TodoController {
   constructor() {
     ProxyState.on("todos", _drawTodos)
     todoService.getTodos()
+    ProxyState.on('count',_TodoCount)
   }
 
   getTodos(){
