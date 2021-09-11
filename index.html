@@ -33,20 +33,37 @@
       </div>
     </div>
 
+
+<!-- clock goes here -->
+   <div class="container-fluid">
+      <div class="row text-center">
+        <div class="col-md-3 text-center"> 
+        </div>
+        <div class="col-md-6 text-center" id="clock">
+          <div id="clock"></div>
+      
+          <!-- Weather Card -->
+      
+        </div>
+        <div class="col-md-3 text-center"></div>
+      </div>
+    </div>
+<!-- clock goes here -->
+
     <div class="container-fluid">
-      <div class="row text-center " id="">
+      <div class="row text-center">
         <div class="col-md-4 text-center"> </div>
+
         <div class="col-md-4 text-center">
-        <div class="card shadow-lg rounded  mb-4">
+        <div class=" shadow-lg rounded  mb-4"> 
           <form onsubmit="app.todoController.addTodo(event)">
-            <div class="form-control shadow-lg rounded py-3 mb-4"> 
-              <label   for="title"> Todo </label>
-              <input type="text" name="title" minlength="3" maxlength="15" required>
+            <div class=" shadow-lg "> 
+              <input type="text" name="title" minlength="3" maxlength="15" required placeholder="Add Todo" class="text-center">
+            </form>
+            <button type="submit" class="btn btn-outline-success shadow mdi mdi-plus-thick"></button>
             </div>
           <div>
-            <button type="submit" class="btn  btn-success shadow mdi mdi-plus-thick">Add task </button>
-          </div>
-        </form>
+          
       </div> 
       <div class="col-md-4 text-center"> </div> 
   </div>
@@ -55,20 +72,11 @@
 
     <!-- todo card start -->
     
-  <div class="container-fluid">
-      <div class="row text-center">
-        <div class="col-md-3 text-center">
-        
-        </div>
-        <div class="col-md-6 text-center" id="todo">
-        <div class="todo"> </div>
+ 
+        <div id="todo" class="todo"> </div>
           <!-- todo template-->
       
-        </div>
-        <div class="col-md-3 text-center"></div>
-      </div>
-    </div>
-    
+  
     <!-- todo card end -->
 
 
@@ -97,3 +105,5 @@
 </body>
 
 </html>
+
+
