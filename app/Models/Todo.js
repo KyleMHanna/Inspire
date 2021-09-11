@@ -9,32 +9,38 @@ export class Todo {
   get Template(){
     if(this.completed){
     return /*html*/ `
-    <div class="row">
-      <div class="col-md-8  shadow-lg ">
-      
+    <div class="container-fluid">
+    <div class="row text center">
+      <div class="col-md-4 text-center"> </div>
+
+      <div class="col-md-4 text-center  shadow-lg ">
+      <div class="card bg-light shadow-lg rounded  mb-4">
           <label class="completed"> </i> ${this.description}</label>    
       </div>
-      <div class="col-md-1  shadow-lg ">
         <button class="btn btn-outline-success "><i class="mdi mdi-check " onclick="app.todoController.toggleTodoStatus('${this.id}')"></i></button>
-      </div>
-      <div class="col-md-1  shadow-lg ">
         <button class="btn btn-outline-danger  "><i class="mdi mdi-delete-forever " onclick="app.todoController.removeTodo('${this.id}')"></i></button>
-      </div>
+          <div class="col-md-4 text-center"> </div>
+    </div>
+    </div>
     </div>
     `
   }
 else {
       return /*html*/`
-    <div class="row">
-      <div class="col-md-8 ">
+  <div class="container-fluid">
+    <div class="row text center">
+      <div class="col-md-4 text-center"> </div>
+
+      <div class="col-md-4 text-center  shadow-lg  ">
           <label class=""></i> ${this.description}</label>    
       </div>
-      <div class="col-md-1">
         <button class="btn "><i class="mdi mdi-check" onclick="app.todoController.toggleTodoStatus('${this.id}')"></i></button>
-      </div>
-      <div class="col-md-1">
         <button class="btn "><i class="mdi mdi-delete-forever" onclick="app.todoController.removeTodo('${this.id}')"></i></button>
-      </div>
+    
+      <div class="col-md-4 text-center"> </div>
+      
+    </div>
+    </div>
     </div>
     `
     }
