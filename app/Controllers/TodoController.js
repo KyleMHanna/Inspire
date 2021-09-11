@@ -10,7 +10,11 @@ function _drawTodos(){
 }
 
 function _TodoCount(){
-  document.getElementById('todo-count').innerHTML = ProxyState.count
+  // document.getElementById('todo-count').innerHTML = ProxyState.count
+  let todocount = ProxyState.todos.filter((t) => t.completed);
+  document.getElementById(
+    "todo-count"
+  ).innerHTML = `${todocount.length} out of ${ProxyState.todos.length}`;
 }
 
 
