@@ -19,20 +19,20 @@ class TodoService {
 
 
   async addTodo(todo) {
-    let res = await api.post();
-    ProxyState.todos.push(new Todo(res.data.data))
+    let res = await api.post('',todo);
+    ProxyState.todos.push(new Todo(res.data))
     ProxyState.todos = ProxyState.todos
     Swal.fire({
-      position: 'top-center',
+      position: 'top-middle',
       icon: 'success',
       title: 'todo added',
       showConfirmButton: false,
-      timer: 5000
+      timer: 2000
     })
   }
 
   async toggleTodoStatus(todoId) {
-    let todo = await ProxyState.todos.find(todo => todo.id == todoId);
+    let todo = await ProxyState.todos.find(t => t.id == todoId);
 
     if(todo.completed){
       todo.completed = false

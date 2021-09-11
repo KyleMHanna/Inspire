@@ -2,27 +2,46 @@ export class Todo {
   constructor(data) {
     this.description = data.description;
     // this.title = data.title
-    this.id = data.todoId
-    this.completed = data.completed
-    this.checked = data.checked || false
+    this.id = data._id
+    this.completed = data.completed 
+    // this.checked = data.checked || false
   }
   get Template(){
+    if(this.completed){
     return /*html*/ `
-    <div class="row ">
-      <div class="col-7">
-          <li class="completed ">- </i> ${this.description}</li>    
+    <div class="row">
+      <div class="col-md-8  shadow-lg ">
+      
+          <label class="completed"> </i> ${this.description}</label>    
       </div>
-      <div class="col-1">
-        <button class="btn border-0 bg-transparent"><i class="mdi mdi-comment-plus" onclick="app.todoController.toggleTodoStatus('${this.id}')"></i></button>
+      <div class="col-md-1  shadow-lg ">
+        <button class="btn btn-outline-success "><i class="mdi mdi-check " onclick="app.todoController.toggleTodoStatus('${this.id}')"></i></button>
       </div>
-      <div class="col-1">
-        <button class="btn border-0 bg-transparent"><i class="mdi mdi-delete-forever " onclick="app.todoController.removeTodo('${this.id}')"></i></button>
+      <div class="col-md-1  shadow-lg ">
+        <button class="btn btn-outline-danger  "><i class="mdi mdi-delete-forever " onclick="app.todoController.removeTodo('${this.id}')"></i></button>
       </div>
     </div>
-
     `
   }
+else {
+      return /*html*/`
+    <div class="row">
+      <div class="col-md-8 ">
+          <label class=""></i> ${this.description}</label>    
+      </div>
+      <div class="col-md-1">
+        <button class="btn "><i class="mdi mdi-check" onclick="app.todoController.toggleTodoStatus('${this.id}')"></i></button>
+      </div>
+      <div class="col-md-1">
+        <button class="btn "><i class="mdi mdi-delete-forever" onclick="app.todoController.removeTodo('${this.id}')"></i></button>
+      </div>
+    </div>
+    `
+    }
+  }
 }
+  
+
     //   <div class="row shadow-lg rounded ">
     //   <div class="todos">
     //   </div>

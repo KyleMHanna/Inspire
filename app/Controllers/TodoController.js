@@ -22,18 +22,39 @@ export class TodoController {
     try {
         todoService.getTodos()
     } catch (error) {
-      console.log(error, 'get getTodos() error in controller');
+      console.log(error, 'get getTodos() error in todo controller');
     }
   }
-addTodo() {
+addTodo(event) {
+  event.preventDefault();
 
+  let form = event.target;
+let todo ={
+  description: form.title.value
+}
 
   try {
   todoService.addTodo(todo);
   } catch (error) {
-        console.log(error, 'get addTodo() error in controller');
+        console.log(error, 'get addTodo() error in todo controller');
   }
+  form.reset()
 }
+toggleTodoStatus(todoId) {
+    try {
+      todoService.toggleTodoStatus(todoId);
+    } catch (error) {
+      console.log(error, 'toggleTodoStatus(todoId) error in todo controller');
+    }
+  }
+
+  removeTodo(todoId) {
+    try {
+      todoService.removeTodo(todoId);
+    } catch (error) {
+      console.error(error)
+    }
+  }
 }
 
 
