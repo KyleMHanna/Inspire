@@ -47,6 +47,11 @@ class TodoService {
   async removeTodo(todoId) {
     await api.delete(todoId)
     this.getTodos()
+    Swal.fire(
+    'Deleted!',
+    ' ',
+    'error'
+      )
   }
 }
 

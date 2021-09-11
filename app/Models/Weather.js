@@ -22,9 +22,9 @@ weatherConversion(){
 get WeatherTemplate(){
     return /*html*/`
 <div class="weather">
-<h3 class="text-dark">${this.city}</h3>
-<h3 class="text-dark">${this.weatherConversion()}&deg;</h3>
-<h3 class="text-dark">${this.weatherDesc}</h3>
+<h3 class="text-primary">${this.city}</h3>
+<h3 class="text-primary">${this.weatherConversion()}&deg;</h3>
+
 <img class=" img-fluid" src="http://openweathermap.org/img/w/${this.icon}.png" alt=""/>
   </div>
 `
