@@ -16,6 +16,7 @@
     -webkit-text-fill-color: transparent;
     background-clip: unset;
     -webkit-background-clip: text;
+    font-size: 300%;
 }
 
 .time{
@@ -23,7 +24,7 @@
 }
 
 #time{
-    text-shadow: 0 0 55px #041cf8;
+    text-shadow: 0 0 55px #000000;
     font-size: 4.5rem;
 }
 #med{
@@ -48,6 +49,20 @@
   padding: 25px;
   background-color: coral;
   color: white;
-  font-size: 25px;
+  font-size: 150%;
   box-sizing: border-box;
+}
+
+.todoCARD {
+    background-color: rgba(97, 96, 96, 0.5);
+}
+
+.completedBG {
+background-color: rgba(63, 243, 9, 0.418); 
+color: ghostwhite;
+}
+
+.uncompletedBG {
+    background-color: rgba(233, 14, 14, 0.445);
+    color: ghostwhite;
 }

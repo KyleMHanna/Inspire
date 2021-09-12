@@ -13,12 +13,12 @@ export class Todo {
     <div class="row text center">
       <div class="col-md-4 text-center"> </div>
 
-      <div class="col-md-4 text-center  shadow-lg ">
-      <div class=" bg-success shadow-lg rounded  mb-4">
-          <label class="completed"> ${this.description} <i class="mdi mdi-check "> </i> </label>    
+      <div class="col-md-4 todoCARD text-center card  shadow-lg ">
+      <div class=" completedBG shadow-lg rounded  mb-4">
+          <label class="completed"> ${this.description} <i class="mdi mdi-check text-light"> </i> </label>    
       </div>
-        <button class="btn  "><i class="mdi mdi-check " onclick="app.todoController.toggleTodoStatus('${this.id}')"></i></button>
-        <button class="btn  "><i class="mdi mdi-delete-forever " onclick="app.todoController.removeTodo('${this.id}')"></i></button>
+        <button class="btn text-light "><i class="mdi mdi-check " onclick="app.todoController.toggleTodoStatus('${this.id}')"></i></button>
+        <button class="btn text-light "><i class="mdi mdi-delete-forever " onclick="app.todoController.removeTodo('${this.id}')"></i></button>
 
           <div class="col-md-4 text-center"> </div>
     </div>
@@ -32,8 +32,8 @@ else {
     <div class="row text center">
       <div class="col-md-4 text-center"> </div>
 
-      <div class="col-md-4 text-center  shadow-lg ">
-      <div class="card bg-danger shadow-lg  mb-4">
+      <div class="col-md-4 text-center card shadow-lg todoCARD">
+      <div class="card todoCARD uncompletedBG shadow-lg  mb-4">
           <label class=""> </i> ${this.description}</label>    
       </div>
         <button class="btn btn-outline-success "><i class="mdi mdi-check" onclick="app.todoController.toggleTodoStatus('${this.id}')"></i></button>
