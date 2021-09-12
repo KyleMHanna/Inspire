@@ -19,6 +19,10 @@ export class WeatherController {
     this.getWeather()
   }
 
+Change(){
+  document.getElementById('f').classList.toggle('visually-hidden')
+  document.getElementById('c').classList.toggle('visually-hidden');
+}
   getWeather() {
     try {
     weatherService.getWeather()

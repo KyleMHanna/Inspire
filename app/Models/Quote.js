@@ -9,7 +9,7 @@ export class Quote {
         return /*html*/`
       <div class="quote">
                 <p class="text-light">"${this.content}"</p>
-                <p class="text-light ">Author: ${this.author}</p>
+                <p id="author" class="visually-hidden">-${this.author} </p>
         </div>
         
         `

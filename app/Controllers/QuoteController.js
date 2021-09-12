@@ -12,6 +12,10 @@ export  class QuoteController {
         quoteService.getQuote()
     }
 
+
+  Author(){
+    document.getElementById('author').classList.toggle('visually-hidden')
+  }
     getQuotes(){
         try {
             quoteService.getQuotes()
