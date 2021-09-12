@@ -33,6 +33,7 @@
     right: 0px;
 }
 
+
 /* .day{
     display: flex;
     justify-content: space-between;
@@ -65,4 +66,8 @@ color: ghostwhite;
 .uncompletedBG {
     background-color: rgba(233, 14, 14, 0.445);
     color: ghostwhite;
+}
+
+.weatherIcon {
+    min-width: 5rem
 }

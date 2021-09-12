@@ -33,12 +33,9 @@ get WeatherTemplate(){
 <h3 class="text-light">${this.city}</h3>
  <div class = "selectable" onclick = "app.weatherController.Change()">
         <div id = "temp">
-<h3 class="text-light " id='f'>${this.weatherConversion()}&deg; F</h3>
-<h3 class="text-light visually-hidden " id='c'>${this.celciusCoversion()}&deg; C</h3>
-<h3 class="text-light">Weather Forcast: ${this.weatherDesc}</h3>
-<h3>
-<img class=" img-fluid" src="http://openweathermap.org/img/w/${this.icon}.png" alt=""/> </h3>
-  </div>
+<h3 class="text-light " id='f'>${this.weatherConversion()}&deg; F <img class=" img-fluid weatherIcon" src="http://openweathermap.org/img/w/${this.icon}.png" alt=""/></h3>
+<h3 class="text-light visually-hidden " id='c'>${this.celciusCoversion()}&deg; C <img class=" img-fluid weatherIcon" src="http://openweathermap.org/img/w/${this.icon}.png" alt=""/></h3>
+
 `
   }
 }
