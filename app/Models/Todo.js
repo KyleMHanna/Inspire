@@ -18,7 +18,7 @@ export class Todo {
           <label class="completed"> ${this.description} <i class="mdi mdi-check "> </i> </label>    
       </div>
         <button class="btn  "><i class="mdi mdi-check " onclick="app.todoController.toggleTodoStatus('${this.id}')"></i></button>
-        <button class="btn-danger  "><i class="mdi mdi-delete-forever " onclick="app.todoController.removeTodo('${this.id}')"></i></button>
+        <button class="btn  "><i class="mdi mdi-delete-forever " onclick="app.todoController.removeTodo('${this.id}')"></i></button>
 
           <div class="col-md-4 text-center"> </div>
     </div>
