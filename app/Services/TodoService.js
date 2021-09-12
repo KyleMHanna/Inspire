@@ -47,22 +47,16 @@ class TodoService {
   }
 
   async removeTodo(todoId) {
+    let x = confirm("Are you sure you want to delete this task?")
+        if(x == true)
     await api.delete(todoId)
     this.getTodos()
-  Swal.fire({
-  title: 'Are you sure you want to delete?',
-  showCancelButton: true,
-  confirmButtonText: 'Yes',
-  denyButtonText: `no`,
-}).then((result) => {
-  /* Read more about isConfirmed, isDenied below */
-  if (result.isConfirmed) {
-    Swal.fire('Saved!', '', 'success')
-  } else if (result.isDenied) {
-    Swal.fire('Changes are not saved', '', 'info')
-  }
-})
-  }
+    // Swal.fire(
+    // 'Deleted!',
+    // ' ',
+    // 'error'
+    //   )
+}
 }
 
 
