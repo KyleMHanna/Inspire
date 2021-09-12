@@ -4,18 +4,24 @@ import { todoService } from "../Services/TodoService.js";
 
 function _drawTodos(){ 
   let template = ''
+
   let newTodo = ProxyState.todos
   newTodo.forEach(t => template += t.Template)
   document.getElementById("todo").innerHTML = template
-}
 
-function _TodoCount(){
-  // document.getElementById('todo-count').innerHTML = ProxyState.count
-  let todocount = ProxyState.todos.filter((t) => t.completed);
+   let todocount = ProxyState.todos.filter((t) => t.completed);
   document.getElementById(
     "todo-count"
   ).innerHTML = `${todocount.length} out of ${ProxyState.todos.length}`;
 }
+
+// function _TodoCount(){
+//   // document.getElementById('todo-count').innerHTML = ProxyState.count
+//   let todocount = ProxyState.todos.filter((t) => t.completed);
+//   document.getElementById(
+//     "todo-count"
+//   ).innerHTML = `${todocount.length} out of ${ProxyState.todos.length}`;
+// }
 
 
 export class TodoController {
@@ -23,7 +29,7 @@ export class TodoController {
   constructor() {
     ProxyState.on("todos", _drawTodos)
     todoService.getTodos()
-    ProxyState.on('count',_TodoCount)
+    // ProxyState.on('count',_TodoCount)
   }
 
   getTodos(){
