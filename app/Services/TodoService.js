@@ -47,7 +47,7 @@ class TodoService {
   }
 
   async removeTodo(todoId) {
-    let x = confirm("Are you sure you want to delete this task?")
+    let x = confirm("Are you sure you want to delete this Todo?")
         if(x == true)
     await api.delete(todoId)
     this.getTodos()
